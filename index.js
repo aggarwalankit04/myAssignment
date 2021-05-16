@@ -40,21 +40,21 @@ var cardObject = [
 ];
 
 //function for setup cards screen
-function CreateScreen(cards) {
+function createScreen(cards) {
     let createCards = document.querySelector(".number-wrapper");
     createCards.innerHTML = '';
-    cards.forEach((v,i) => {
-        createCards.innerHTML +=`<div class="${v.colorCode}">${v.value}</div>`;
+    cards.forEach((card,index) => {
+        createCards.innerHTML +=`<div class="${card.colorCode}">${card.value}</div>`;
     })
 }
 
 //shuffle the cards randomly
 function shuffleCards(cards) {
-    for (var i = cards.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = cards[i];
-        cards[i] = cards[j];
-        cards[j] = temp;
+    for (var cardIndex = cards.length - 1; cardIndex > 0; cardIndex--) {
+        var randomIndex = Math.floor(Math.random() * (cardIndex + 1));
+        var temp = cards[cardIndex];
+        cards[cardIndex] = cards[randomIndex];
+        cards[randomIndex] = temp;
     }
     return cards;
 }
@@ -66,20 +66,18 @@ function sortCards(cards){
 
 //Shuffling cards when clicked
 document.querySelector(".shuffleCards").addEventListener("click", function(){
-    console.log("clicked");
     let cards= shuffleCards(cardObject)
-    CreateScreen(cards);
+    createScreen(cards);
 
 });
 
 //Sort the  cards when button clicked clicked
 document.querySelector(".sortCards").addEventListener("click", function(){
-    console.log("clicked");
     let cards = sortCards(cardObject);
-    CreateScreen(cards);
+    createScreen(cards);
 
 });
 
 //callig to render the screen with cards
-CreateScreen(cardObject);
+createScreen(cardObject);
 
