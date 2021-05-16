@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+h4{
+    text-align: center;
+    font-size: 20px;
+    color: #333333;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin:  0 auto;
+    background-color: #EFEFEF;
+    border-top: 5px solid #BFBFBF;
+}
+
+.wrapper .left {
+    flex: 0 0 70%;
+    margin-top: -1px;
+}
+
+.wrapper .right {
+    flex: 0 0 30%;
+    padding: 15px;
+}
+
+.number-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number-wrapper > div{
+    color:#fff;
+    flex: 0 0 33.33%;
+    padding: 0 15px;
+    height: 213px;
+    line-height: 213px;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.btn-primary {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    background-color: #24a7d0bf;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 2px 2px #2B8EAD;
+}
+
+p {
+    text-align: center;
+    font-style: italic;
+    color: #333333;    
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.color1 {
+ background-color: #000000;
+}
+.color2 {
+ background-color: #2B8EAD;
+}
+.color3 {
+    background-color: #333333;
+}
+.color4 {
+    background-color: #6F98A8;
+}
+.color6 {
+    background-color: #BFBFBF;
+}
+.color7 {
+    background-color: #EFEFEF;
+}
+.color8 {
+    background-color: #2F454E;
+}
+.color9 {
+    background-color: #72C3DC;
+}
+
+@media (max-width:375px){
+    h4 {
+        order: 1;
+        background-color: #333;
+        color:#fff;
+        margin: 0px;
+        padding: 15px;
+    }
+    .wrapper{
+        background-color: #fff;
+        border: none;
+    }
+    .wrapper .right {
+        order: 2;
+        display: flex;
+        flex: 0 0 100%;
+        justify-content: center;
+    }
+    .right a {
+        margin: 10px;
+    }
+    .wrapper .left {
+        order: 3;
+        flex: 0 0 100%;
+    }
+    .number-wrapper div {
+        flex: 0 0 100%;
+        height: auto;
+        line-height: inherit;
+        font-size: 20px;
+        padding: 10px 0px;
+        background-color: #EFEFEF;
+        margin-bottom: 3px;
+        color: #333;
+    }
+    .color2 {
+        border-left: 7px solid #2B8EAD;
+    }
+    .color4 {
+        border-left: 7px solid #6F98A8;
+    }
+    .color6 {
+        border-left: 7px solid #BFBFBF;
+    }
+    .color8 {
+        border-left: 7px solid #2F454E;
+    }
+}
